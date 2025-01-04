@@ -1,0 +1,58 @@
+---
+import Badge from '../components/Badge.astro';
+import Layout from '../layouts/Layout.astro';
+import ListButtons from "../components/ListButtons.astro"
+import Experience from '../components/Experience.astro';
+import SectionContainer from "../components/SectionContainer.astro"
+import ExperienciaLaborar from '../components/Icons/ExperienciaLaborar.astro';
+import CodeIcon from '../components/Icons/CodeIcon.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<SectionContainer class="py-44 pb-30">
+		<main>
+			<img 
+			class="rounded-full mb-5 w-12 h-12"
+			src="https://scontent.fpaz3-1.fna.fbcdn.net/v/t39.30808-1/433422296_1850527425372399_8735386883470347072_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeHkyzHjPg2pEc8M7cGXLzSVT9r7DhmYUlhP2vsOGZhSWMwVjAj6yndf5i1i69HGpbxsji4W9P2H_PCE3tzwK89y&_nc_ohc=4d0Uy7ua9csQ7kNvgFwggKJ&_nc_zt=24&_nc_ht=scontent.fpaz3-1.fna&_nc_gid=A33hrwqrTcOhGVoyeUvGAau&oh=00_AYDdkcwzsMxe4H1GAEBej7YYNRpZgmLtXJ-_bU5a17z4cw&oe=677E2C77" alt="Ricardo Photo">
+			<h1 class="text-white text-2xl xl:text-5xl font-bold flex gap-x-4 pb-10 flex-row">Hey, I'm Ricardo 
+				<a 
+					href="https://www.linkedin.com/in/ricardo-luna-hernandez-4b3b86332/" 
+					class="flex justify-center items-center"
+					target="_blank"
+					rel="noopener"
+					>
+					<Badge>Avaliable for hire</Badge>
+				</a>
+			</h1>
+	
+			<h1 class="text-xl xl:text-2xl text-wrap">
+				<span>+2 years of experience.</span>
+				<span class="text-yellow-200/90"> Web Developer and Mobile App Developer.</span>
+				<span class="text-red-200/90">From Veracruz, Mexico 🇲🇽.</span> 
+				<span class="opacity-70">Specialized in frontend and AWS.</span>
+			</h1>
+			<ListButtons />
+		</main>
+	</SectionContainer>
+
+	<SectionContainer id="experience">
+		<h2 class="text-2xl font-semibold flex items-center gap-x-2">
+			<ExperienciaLaborar class="size-6" />			
+			Experiencia Laborar
+		</h2>
+		<Experience />
+	</SectionContainer>
+
+	<SectionContainer id="projects" class="mt-10">
+		<h2 class="text-2xl font-semibold flex items-center gap-x-2 mb-10">
+			<CodeIcon class="size-6" />			
+			Projects
+		</h2>
+		<Projects />
+	</SectionContainer>
+</Layout>
