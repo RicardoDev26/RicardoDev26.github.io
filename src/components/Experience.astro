@@ -1,0 +1,37 @@
+---
+import ExperienceItems from "./ExperienceItems.astro"
+
+const EXPERIENCIE = [
+    {
+        date: 'Octuber 2024 - Present',
+        title: 'Bizzne | Front-End Developer',
+        description: "I work as a Front-End Developer focused on mobile applications for iOS and Android, using React Native. My primary responsibility is developing reusable components that my teammates utilize to build the app's user interfaces.",
+        link: "#"
+    },
+    {
+        date: 'April 2023 to November 2023',
+        title: 'EventSigth | Frontend Developer WebSite & AppMobile',
+        description: "During my eight months as a developer at EventSight, I developed and maintained the company’s event management platform using Vue.js with TailwindCSS for the UI development. My main focus in the project was on creating attendee tables, notifications, event sections, and all the forms used on the website. My work involved close collaboration with cross-functional teams, focusing on delivering scalable, cloud-based solutions that aligned with business objectives and technical requirements.",
+        link: "https://www.o-zum.com/"
+    },
+    {
+        date: 'May 2022 to March 2023',
+        title: 'Freelance | Front-End Developer',
+        description: "As a freelance developer, I have led and contributed to a diverse range of web projects, demonstrating my ability to deliver innovative and efficient technological solutions. Throughout these projects, I gained extensive experience with React.js, Vue.js, Tailwind CSS, Git, and AWS, further honing my expertise in front-end development, responsive design, and cloud integration.",
+        link: "#"
+    },
+    
+]
+---
+
+
+<ol class="relative border-s border-gray-700">                  
+   {
+    EXPERIENCIE.map(experiencie => (
+    <li class="mb-10 ms-6">
+        <ExperienceItems {...experiencie} />
+    </li>       
+    ))
+   }
+</ol>
+

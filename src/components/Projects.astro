@@ -1,0 +1,178 @@
+---
+import ReactIcon from "../components/Icons/ReactIcon.astro"
+import TailwindIcon from "../components/Icons/TailwindIcon.astro"
+import ReduxIcon from "../components/Icons/ReduxIcon.astro"
+import TauriIcon from "../components/Icons/TauriIcon.astro"
+import VueIcon from "../components/Icons/VueIcon.astro"
+import PiniaIcon from "./Icons/PiniaIcon.astro"
+import NodeIcon from "../components/Icons/NodeIcon.astro"
+import SvelteIcon from "../components/Icons/SvelteIcon.astro"
+import GoIcon from "../components/Icons/GoIcon.astro"
+import Github from "./Icons/Github.astro"
+
+const TAGS = {
+    REACTNATIVE: {
+        name: "ReactNative",
+        class: "bg-black text-blue-400",
+        icon: ReactIcon
+    },
+    PINIA: {
+        name: "Pinia",
+        class: "bg-black text-[#FFE56C]",
+        icon: PiniaIcon
+    },
+    REACT: {
+        name: "React",
+        class: "bg-black text-blue-400",
+        icon: ReactIcon
+    },
+    VUE: {
+        name: "Vue.Js",
+        class: "bg-black text-[#41B883]",
+        icon: VueIcon
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-white/10 text-[#73bcf6]",
+        icon: TailwindIcon
+    },
+    REDUX: {
+        name: "Redux",
+        class: "bg-black text-[#764abc]",
+        icon: ReduxIcon
+    },
+    TAURI: {
+        name: "Tauri",
+        class: "bg-black text-[#24C8DB]",
+        icon: TauriIcon
+    },
+    NODE: {
+        name: "Node.Js",
+        class: "bg-black text-[#24C8DB]",
+        icon: NodeIcon
+    },
+    SVELTE: {
+        name: "Svelte.Js",
+        class: "bg-white text-[#FF3E00]",
+        icon: SvelteIcon
+    },
+    GO: {
+        name: "Golang",
+        class: "bg-black text-white",
+        icon: GoIcon
+    },
+}
+
+const PROJECTS = [
+    {
+        title: "TogetherTime",
+        description: "Online agenda for organizing events and collaborating in real-time.",
+        github: "https://github.com/RicardoDev26/Together-Time",
+        image: "/projects/TogetherTime.webp",
+        tags: [TAGS.REACTNATIVE, TAGS.TAILWIND, TAGS.REDUX]
+    },
+    {
+        title: "Gym-LBunker | FreeLance",
+        description: "Client management system for gyms, built with Tauri and React.",
+        github: "https://github.com/RicardoDev26/Gym-LBunker-Tauri",
+        image: "/projects/GymLBunker.webp",
+        tags: [TAGS.TAURI, TAGS.TAILWIND, TAGS.REDUX, TAGS.REACT]
+    },
+    {
+        title: "Bizzne | Bizzne.Inc",
+        description: "Mobile application for Android and iOS that allows booking services for weddings, catering, and photography, simplifying event management",
+        image: "/projects/Bizzne.webp",
+        tags: [TAGS.REACTNATIVE, TAGS.TAILWIND, TAGS.REDUX]
+    },
+    {
+        title: "EventhSigth | EventSigh.Inc",
+        description: "Web platform and mobile application for managing large events, enabling organization and real-time tracking.",
+        image: "/projects/Event.webp",
+        tags: [TAGS.VUE, TAGS.TAILWIND, TAGS.PINIA]
+    },
+    {
+        title: "ChatsTelegram | ProjectSchool",
+        description: "Web page interacting with the Telegram API to create chat rooms and invite friends using a unique room ID.",
+        github: "https://github.com/RicardoDev26/Chats",
+        image: "/projects/Telegram.webp",
+        tags: [TAGS.VUE, TAGS.TAILWIND, TAGS.NODE]
+    },
+    {
+        title: "BlackJack | ProjectSchool",
+        description: "A 21 (Blackjack) game where the user plays against a bot. A project created to practice backend development at school.",
+        link: "https://black-hack-nine.vercel.app/",
+        github: "https://github.com/RicardoDev26/BlackHack",
+        image: "/projects/BlackJack.webp",
+        tags: [TAGS.VUE, TAGS.TAILWIND, TAGS.NODE]
+    },
+    {
+        title: "CoinFlip | Freelance",
+        description: "Online betting site where users can participate in a coin flip game to win.",  
+        tags: [TAGS.SVELTE, TAGS.GO, TAGS.TAILWIND]
+    },
+    {
+        title: "PeticionsFetch | SchoolProject",
+        description: "Online betting site where users can participate in a coin flip game to win.",  
+        image: "/projects/Peticiones.webp",
+        link: "https://peticiones-f-etch.vercel.app/",
+        github: "https://github.com/RicardoDev26/BlackHack",
+        tags: [TAGS.SVELTE, TAGS.GO, TAGS.TAILWIND]
+    },
+    {
+        title: "AmazonOne | SchoolProject",
+        description: "Online betting site where users can participate in a coin flip game to win.",  
+        image: "/projects/Amazon.webp",
+        link: "https://amazon-api-nine.vercel.app/",
+        github: "https://github.com/RicardoDev26/BlackHack",
+        tags: [TAGS.SVELTE, TAGS.GO, TAGS.TAILWIND]
+    },
+]
+
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags, github, link }) => (
+        <article class="mb-28">
+            <h3 class="text-xl xl:text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-sm xl:text-lg text-semibold text-white/80 mb-4 text-pretty">{description}</p>
+            <div class="flex gap-x-2">
+                {github && (
+                    <a 
+                        href={github} 
+                        target="_blank" 
+                        rel="noopener" 
+                        class="flex gap-x-2 items-center justify-center rounded-full py-2 hover:scale-110 transition text-sm mt-4 bg-black w-[140px]"
+                    >
+                        <Github class="size-4" /> View Repository
+                    </a>
+                )}
+                {link && (
+                    <a 
+                        href={link} 
+                        target="_blank" 
+                        rel="noopener" 
+                        class="flex gap-x-2 items-center justify-center rounded-full py-2 hover:scale-110 transition text-sm mt-4 bg-black w-[140px]"
+                    >
+                        <Github class="size-4" /> View Project
+                    </a>
+                )}
+            </div>
+
+            <ul class="flex gap-x-4 flex-row mt-5">
+                {tags.map((tag) => (
+                    <li key={tag.name}>
+                        <span class={`flex gap-x-2 rounded-full text-xs justify-center py-1 px-2 ${tag.class}`}>
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            {image && (
+                <img 
+                    class="rounded shadow-2xl shadow-white/10 mt-6" 
+                    src={image} alt={`Screenshot of project ${image}`} />
+                )}
+        </article>
+    ))
+}
